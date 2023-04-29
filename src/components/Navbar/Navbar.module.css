@@ -35,4 +35,46 @@
   .navLink:hover {
     text-decoration: underline;
   }
+
+  
+
+
+
+  .dropdownMenu {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 200px;
+    z-index: 1;
+  }
+  
+  .dropdownLink {
+    color: #333;
+    padding: 5px;
+    text-decoration: none;
+  }
+  
+  /* Styles for the open state of the dropdown menu */
+  
+  .navLink:focus,
+  .navLink:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+  }
+  
+  .dropdownMenu.active {
+    display: flex;
+  }
+  
+  /* Styles for the closed state of the dropdown menu */
+  
+  .dropdownMenu {
+    display: none;
+  }
   

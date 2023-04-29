@@ -1,17 +1,21 @@
 import React from 'react';
 import styles from './Navbar.module.css';
+import { Link } from 'react-router-dom';
+import  {Dropdown}  from './Dropdown';
 
 const Navbar = () => {
+
   return (
     <nav className={styles.navbar}>
-      <a href="/" className={styles.navbarBrand}>Football Leagues</a>
-      <ul className={styles.navbarNav}>
-        <li className={styles.navItem}><a href="/premier-league" className={styles.navLink}>Premier League</a></li>
-        <li className={styles.navItem}><a href="/la-liga" className={styles.navLink}>La Liga</a></li>
-        <li className={styles.navItem}><a href="/bundesliga" className={styles.navLink}>Bundesliga</a></li>
-        <li className={styles.navItem}><a href="/serie-a" className={styles.navLink}>Serie A</a></li>
-        <li className={styles.navItem}><a href="/ligue-1" className={styles.navLink}>Ligue 1</a></li>
-      </ul>
+      <Link to="/" className={styles.navbarBrand}>Football Leagues</Link>
+    <Dropdown/>
+      {/* <ul className={styles.navbarNav}>
+        <li className={styles.navItem}><Link to="/premier-league" className={styles.navLink}>Premier League</Link></li>
+        <li className={styles.navItem}><Link to="/la-liga" className={styles.navLink}>La Liga</Link></li>
+        <li className={styles.navItem}><Link to="/bundesliga" className={styles.navLink}>Bundesliga</Link></li>
+        <li className={styles.navItem}><Link to="/serie-a" className={styles.navLink}>Serie A</Link></li>
+        <li className={styles.navItem}><Link to="/ligue-1" className={styles.navLink}>Ligue 1</Link></li>
+      </ul> */}
     </nav>
   );
 };

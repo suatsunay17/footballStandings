@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Home } from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
@@ -13,6 +13,7 @@ import { LaLigaDetails } from "./components/ClubDetails/LaLigaDetails";
 import { BundesDetails } from "./components/ClubDetails/BundesDetails";
 import { SerieADetails } from "./components/ClubDetails/SerieADetails";
 import { Ligue1Details } from "./components/ClubDetails/Ligue1Details";
+import './App.css'
 
 function App() {
   return (
