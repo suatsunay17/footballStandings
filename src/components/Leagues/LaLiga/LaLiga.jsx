@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import styles from './LaLiga.module.css'
+import styles from '../PremierLeague/PremierLeague.module.css'
+
 
 export const LaLiga = () => {
     const [teams, setTeams] = useState([]);
@@ -33,6 +34,8 @@ export const LaLiga = () => {
                         <th className={styles.tableCell + ' ' + styles.tableCellTeam}>Position</th>
                         <th className={styles.tableCell + ' ' + styles.tableCellTeam}>Team</th>
                         <th className={styles.tableCell + ' ' + styles.tableCellPoints}>Points</th>
+                        <th className={styles.tableCell + ' ' + styles.tableCellPoints}>GD</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +45,8 @@ export const LaLiga = () => {
                             <td className={styles.tableCell + ' ' + styles.tableCellTeam}>{team.rank}</td>
                             <td className={styles.tableCell + ' ' + styles.tableCellTeam}><Link to={`/la-liga/${team.team.id}`}>{team.team.name}</Link></td>
                             <td className={styles.tableCell + ' ' + styles.tableCellPoints}>{team.points}</td>
+                            <td className={styles.tableCell + ' ' + styles.tableCellPoints}>{team.goalsDiff}</td>
+
                         </tr>
                     ))}
                 </tbody>

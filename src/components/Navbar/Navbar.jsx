@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <Link to="/" className={styles.navbarBrand}>Football Leagues</Link>
+      <Link to="/" className={styles.navbarBrand}>football433</Link>
     <Dropdown/>
       {/* <ul className={styles.navbarNav}>
         <li className={styles.navItem}><Link to="/premier-league" className={styles.navLink}>Premier League</Link></li>

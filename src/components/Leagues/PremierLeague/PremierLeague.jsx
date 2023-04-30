@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import styles from './PremerLeague.module.css'
+import styles from './PremierLeague.module.css'
 import { Link } from 'react-router-dom';
 
 export const PremierLeague = () => {
@@ -33,6 +33,7 @@ export const PremierLeague = () => {
                         <th className={styles.tableCell + ' ' + styles.tableCellTeam}>Position</th>
                         <th className={styles.tableCell + ' ' + styles.tableCellTeam}>Team</th>
                         <th className={styles.tableCell + ' ' + styles.tableCellPoints}>Points</th>
+                        <th className={styles.tableCell + ' ' + styles.tableCellPoints}>GD</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,7 @@ export const PremierLeague = () => {
                             <td className={styles.tableCell + ' ' + styles.tableCellTeam}>{team.rank}</td>
                             <td className={styles.tableCell + ' ' + styles.tableCellTeam}><Link to={`/premier-league/${team.team.id}`}>{team.team.name}</Link></td>
                             <td className={styles.tableCell + ' ' + styles.tableCellPoints}>{team.points}</td>
+                            <td className={styles.tableCell + ' ' + styles.tableCellPoints}>{team.goalsDiff}</td>
                         </tr>
                     ))}
                 </tbody>

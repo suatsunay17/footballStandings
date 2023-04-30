@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css'
 
 import { Home } from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
@@ -13,7 +14,7 @@ import { LaLigaDetails } from "./components/ClubDetails/LaLigaDetails";
 import { BundesDetails } from "./components/ClubDetails/BundesDetails";
 import { SerieADetails } from "./components/ClubDetails/SerieADetails";
 import { Ligue1Details } from "./components/ClubDetails/Ligue1Details";
-import './App.css'
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/ligue-1" element={<Ligue1 />} />
         <Route path="/ligue-1/:teamId" element={<Ligue1Details />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
