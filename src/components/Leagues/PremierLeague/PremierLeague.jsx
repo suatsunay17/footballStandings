@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 export const PremierLeague = () => {
     const [teams, setTeams] = useState([]);
 
+    
     useEffect(() => {
         axios.get('https://api-football-v1.p.rapidapi.com/v3/standings?season=2022&league=39', {
             headers: {
@@ -40,7 +41,7 @@ export const PremierLeague = () => {
                         <tr key={team.team.id} className={styles.tableRow}>
                             <td className={styles.tableCell}><img src={team.team.logo} alt={`${team.team.name} logo`} className={styles.tableCellLogo} /></td>
                             <td className={styles.tableCell + ' ' + styles.tableCellTeam}>{team.rank}</td>
-                            <td className={styles.tableCell + ' ' + styles.tableCellTeam}><Link to={`/premier-league/${team.team.id}`}>{team.team.name}</Link></td>
+                            <td className={styles.tableCell + ' ' + styles.tableCellTeam}><Link to={`/details/${team.team.id}`} state={team}>{team.team.name}</Link></td>
                             <td className={styles.tableCell + ' ' + styles.tableCellPoints}>{team.points}</td>
                             <td className={styles.tableCell + ' ' + styles.tableCellPoints}>{team.goalsDiff}</td>
                         </tr>

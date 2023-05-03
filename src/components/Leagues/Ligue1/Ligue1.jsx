@@ -43,7 +43,7 @@ export const Ligue1 = () => {
                         <tr key={team.team.id} className={styles.tableRow}>
                             <td className={styles.tableCell}><img src={team.team.logo} alt={`${team.team.name} logo`} className={styles.tableCellLogo} /></td>
                             <td className={styles.tableCell + ' ' + styles.tableCellTeam}>{team.rank}</td>
-                            <td className={styles.tableCell + ' ' + styles.tableCellTeam}><Link to={`/ligue-1/${team.team.id}`}>{team.team.name}</Link></td>
+                            <td className={styles.tableCell + ' ' + styles.tableCellTeam}><Link to={`/details/${team.team.id}`} state={team}>{team.team.name}</Link></td>
                             <td className={styles.tableCell + ' ' + styles.tableCellPoints}>{team.points}</td>
                             <td className={styles.tableCell + ' ' + styles.tableCellPoints}>{team.goalsDiff}</td>
 
