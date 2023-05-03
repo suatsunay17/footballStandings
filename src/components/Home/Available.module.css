@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px;
-  margin-left: 10rem;
   align-items: stretch;
 }
 
@@ -24,6 +23,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 200px;
+
 }
 
 .card:hover {
@@ -50,4 +50,8 @@
 
 .header{
   text-align: center;
+}
+
+.card a{
+  text-decoration: none;
 }

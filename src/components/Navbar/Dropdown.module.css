@@ -37,9 +37,9 @@
     padding: 10px;
   }
   
-  .dd-item:hover {
+  /* .dd-item:hover {
     background-color: #ddd;
-  }
+  } */
   
   .dd-link {
     text-decoration: none;

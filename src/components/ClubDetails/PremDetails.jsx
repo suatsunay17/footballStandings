@@ -6,7 +6,7 @@ import axios from "axios";
 export const PremDetails = () => {
 
   const { teamId } = useParams();
-  
+
   const [team, setTeam] = useState({ statistics: {} });
 
   useEffect(() => {
@@ -52,6 +52,24 @@ export const PremDetails = () => {
               <p className={styles.infoValue}>{team.statistics.fixtures.loses.total}</p>
               <p className={styles.infoLabel}>Draws:</p>
               <p className={styles.infoValue}>{team.statistics.fixtures.draws.total}</p>
+            </div>
+            <div className={styles.fixtures}>
+              <p className={styles.infoLabel}>Goals for: </p>
+              <p className={styles.infoLabel}>Home: </p>
+              <p className={styles.infoValue}>{team.statistics.goals.for.total.home}</p>
+              <p className={styles.infoLabel}>Away:</p>
+              <p className={styles.infoValue}>{team.statistics.goals.for.total.away}</p>
+              <p className={styles.infoLabel}>Total:</p>
+              <p className={styles.infoValue}>{team.statistics.goals.for.total.total}</p>
+            </div>
+            <div className={styles.fixtures}>
+              <p className={styles.infoLabel}>Goals against: </p>
+              <p className={styles.infoLabel}>Home: </p>
+              <p className={styles.infoValue}>{team.statistics.goals.against.total.home}</p>
+              <p className={styles.infoLabel}>Away:</p>
+              <p className={styles.infoValue}>{team.statistics.goals.against.total.away}</p>
+              <p className={styles.infoLabel}>Total:</p>
+              <p className={styles.infoValue}>{team.statistics.goals.against.total.total}</p>
             </div>
             <div className={styles.form}>
               <p className={styles.infoLabel}>Form:</p>

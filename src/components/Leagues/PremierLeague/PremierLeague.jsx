@@ -22,7 +22,6 @@ export const PremierLeague = () => {
                 console.log(error);
             });
     }, []);
-
     return (
         <div className={styles.tableContainer}>
             <h1 className={styles.tableTitle}>Premier League Table</h1>
